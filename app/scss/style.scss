@@ -1,0 +1,15 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+.test {
+  max-width: 100px;
+  height: 19px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+@import "media";
+
+
