@@ -189,7 +189,6 @@
 }
 
 .surf {
-  padding: 160px 0 210px;
   background-image: url(../img/location.png);
   background-repeat: no-repeat;
   background-position: right 200px;
@@ -294,10 +293,9 @@
     .slider-dots__content {
       display: block;
       width: 284px;
-      padding: 30px;
-      background: rgba( #0F1010, .7);
-      z-index: 61;
+      padding: 28px 31px 0 32px;
       border-radius: 6px;
+    
       
     }
   }
@@ -307,6 +305,12 @@
   justify-content: space-between;
   padding-bottom: 30px;
   
+}
+.slider-dots__content-item {
+  text-align: center;
+  img {
+    margin-bottom: 7px;
+  }
 }
 .slider-dots__content-title {
   font-weight: 800;
@@ -336,9 +340,11 @@
 }
 .slider-dots__content-number {
   font-weight: 800;
+  font-size: 16px;
 }
 .slider-dots__content-name {
 font-size: 10px;
+font-weight: 300;
 }
   .slider-dots__circle {
   border-radius: 24px;
@@ -350,6 +356,23 @@ font-size: 10px;
 
 .slider-dots__content {
   display: none;
+  transform: translateX(-55%);
+  background: rgba( #0F1010, .7);
+  position: absolute;
+  bottom: 35px;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid $green;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    bottom: -20px;
+    left: 55%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 }
 .slider-dots {
   position: relative;
@@ -357,10 +380,22 @@ font-size: 10px;
 .slider-dots--1 {
   top: 350px;
   left: 0;
+  .slider-dots__content {
+    transform: translateX(0);
+    &::before {
+      left: 0;
+    }
+  }
 }
 .slider-dots--2 {
   top: 270px;
   left: -20px;
+  .slider-dots__content {
+    transform: translateX(-40%);
+    &::before {
+      left: 113px;
+    }
+  }
   .slider-dots__circle{
     position: relative;
     &::before {
@@ -400,6 +435,20 @@ font-size: 10px;
 .slider-dots--8 {
   top: 470px;
   right: -30px;
+}
+
+
+.travel {
+  background-image: url(../img/cocktail_img.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+.travel-slider {
+  &__head {
+    background-position: top ;
+    background-repeat: no-repeat;
+  }
 }
 
 
